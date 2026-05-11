@@ -1,0 +1,52 @@
+Home
+  Header
+    TopBar
+    HeroBanner
+      NavBar
+        Left
+        center
+        Menu
+        Features
+	NavBottom
+      Announcement
+
+  Unisex
+    MaleImg
+      ImgContent
+    FemaleImg
+      ImgContent
+
+  Categories
+    Cat1
+    Cat2
+    Cat3
+    Cat4
+
+  Display
+    Products
+    DisplayContent
+
+  Promotion
+    Promo1
+	PLeftContent
+
+  FtSlider
+    FwController
+    Fw
+  
+  Seasonal
+    SCol1
+      SeasonalContent
+    SCol2
+      SeasonalContent
+    SCol3
+      SeasonalContent
+
+  Info
+  
+  Footer
+    Subscribe
+    FooterContents
+    Follow
+    Certified
+    BottomFooter	
