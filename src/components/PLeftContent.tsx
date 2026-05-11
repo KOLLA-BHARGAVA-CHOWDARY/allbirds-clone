@@ -8,7 +8,7 @@ function PLeftContent()
             <p className="text-white whitespace-nowrap mb-5"> 
                 Show your true colors in eight exclusivePantone-curated shades. 
             </p>
-            <button className="text-black bg-white rounded-2xl py-1 px-4 text-xs font-semibold ">
+            <button className="text-black bg-white rounded-2xl py-2 px-4 text-xs font-semibold ">
                 SHOP NOW
             </button>    
         </div>

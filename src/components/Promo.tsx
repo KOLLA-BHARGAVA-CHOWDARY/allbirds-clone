@@ -1,37 +1,89 @@
-import Female1 from '../images/female1.jpg';
-import PLeftContent from './PLeftContent';
-import Banner1 from '../images/banner1.webp';
-import Shoe1 from '../images/shoe1.webp';
-import ShoeColor1 from '../images/shoecolor1.webp';
+//it is rendering component for promotion page, it is rendering promo card component and passing data to it
+import { useState, useEffect } from 'react';
 
-function Promo1()
+import PromoCard from './PromoCard';
+
+import Female1 from '../images/female1.jpg';
+import Female2 from '../images/female2.png';
+import Female3 from '../images/female3.png';
+import Male1 from '../images/male1.png';
+import Male2 from '../images/male2.png';
+
+import Banner1 from '../images/banner1.webp';
+import Banner2 from '../images/banner2.webp';
+import Banner3 from '../images/banner3.webp';
+import Banner4 from '../images/banner4.webp';
+import Banner5 from '../images/banner5.webp';
+
+import Shoe1 from '../images/shoe1.webp';
+import Shoe2 from '../images/shoe2.webp';
+import Shoe3 from '../images/shoe3.webp';
+import Shoe4 from '../images/shoe4.webp';
+import Shoe5 from '../images/shoe5.webp';
+
+import ShoeColor1 from '../images/shoecolor1.webp';
+import ShoeColor2 from '../images/shoecolor2.webp';
+import ShoeColor3 from '../images/shoecolor3.webp';
+import ShoeColor4 from '../images/shoecolor4.webp';
+import ShoeColor5 from '../images/shoecolor5.webp';
+
+function Promo()
 {
+    const promoData = [
+        {
+            picture: Female1,
+            banner: Banner1,
+            shoe: Shoe1,
+            shoeColor: ShoeColor1
+        },
+
+        {
+            picture: Female2,
+            banner: Banner2,
+            shoe: Shoe2,
+            shoeColor: ShoeColor2
+        },
+
+        {
+            picture: Female3,
+            banner: Banner3,
+            shoe: Shoe3,
+            shoeColor: ShoeColor3
+        },
+
+        {
+            picture: Male1,
+            banner: Banner4,
+            shoe: Shoe4,
+            shoeColor: ShoeColor4
+        },
+
+        {
+            picture: Male2,
+            banner: Banner5,
+            shoe: Shoe5,
+            shoeColor: ShoeColor5
+        }
+    ];
+
+    const [activeIndex, setActiveIndex] = useState(0);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setActiveIndex(prev => (prev+1) % promoData.length);
+        }, 5000);
+            return () => clearInterval(interval);
+    }, [promoData.length]);
+
+    const acrivePromo = promoData[activeIndex];
+
     return (
-        <section className="my-[80px] mx-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-                <article className="relative h-full">
-                    <img src={Female1} alt="Bold By Nature" className="rounded-2xl w-full h-full object-cover" />
-                    <PLeftContent />
-                </article> 
-            </div>
-            <div>
-                <article className="mb-4">
-                    <img src={Banner1} alt="allbirds x pantone" className="rounded-2xl w-full h-full object-cover" />
-                </article>
-                <div className="grid grid-cols-2">
-                    <article className="relative mr-4">
-                        <img src={Shoe1} alt="shoe" className="rounded-2xl w-full h-full object-cover" />
-                        <button className="absolute border border-black rounded-full bottom-4 right-4 bg-white w-8 h-8">
-                            👛
-                        </button>
-                    </article>
-                    <article>
-                        <img src={ShoeColor1} alt="shoeColor" className="rounded-2xl w-full h-full object-cover" />
-                    </article>
-                </div>
-            </div>
-        </section>
+        <PromoCard
+            picture={acrivePromo.picture}
+            banner={acrivePromo.banner}
+            shoe={acrivePromo.shoe}
+            shoeColor={acrivePromo.shoeColor}
+        />   
     );
 }
 
-export default Promo1;
+export default Promo;

@@ -4,9 +4,7 @@ function Promotion()
 {
     return (
         <section>
-
             <Promo />
-
         </section>
     );
 }
