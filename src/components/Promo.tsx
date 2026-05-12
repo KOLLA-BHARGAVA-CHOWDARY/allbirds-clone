@@ -1,5 +1,9 @@
 //it is rendering component for promotion page, it is rendering promo card component and passing data to it
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
+import {Swiper, SwiperSlide} from 'swiper/react';
+import {Autoplay, EffectFade} from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-fade';
 
 import PromoCard from './PromoCard';
 
@@ -66,23 +70,51 @@ function Promo()
         }
     ];
 
-    const [activeIndex, setActiveIndex] = useState(0);
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setActiveIndex(prev => (prev+1) % promoData.length);
-        }, 5000);
-            return () => clearInterval(interval);
-    }, [promoData.length]);
+    // const [activeIndex, setActiveIndex] = useState(0);
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         setActiveIndex(prev => (prev+1) % promoData.length);
+    //     }, 5000);
+    //         return () => clearInterval(interval);
+    // }, [promoData.length]);
 
-    const acrivePromo = promoData[activeIndex];
+    // const activePromo = promoData[activeIndex];
 
     return (
-        <PromoCard
-            picture={acrivePromo.picture}
-            banner={acrivePromo.banner}
-            shoe={acrivePromo.shoe}
-            shoeColor={acrivePromo.shoeColor}
-        />   
+
+        <Swiper
+            modules={[Autoplay, EffectFade]}
+            effect="fade"
+            fadeEffect={{ crossFade: true }}
+            autoplay={{
+                delay:3000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: false
+            }}
+            loop={true}
+            slidesPerView={1}
+            spaceBetween={0}
+            speed={300}
+        > 
+            {
+                promoData.map((promo, index) => (
+                <SwiperSlide key={index}>
+                    <PromoCard 
+                        picture={promo.picture}
+                        banner={promo.banner}
+                        shoe={promo.shoe}
+                        shoeColor={promo.shoeColor}
+                    />
+                </SwiperSlide> 
+            ))}
+        </Swiper>
+
+        // <PromoCard
+        //     picture={activePromo.picture}
+        //     banner={activePromo.banner}
+        //     shoe={activePromo.shoe}
+        //     shoeColor={activePromo.shoeColor}
+        // />   
     );
 }
 

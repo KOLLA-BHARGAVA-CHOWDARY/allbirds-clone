@@ -10,10 +10,8 @@ Home
 	NavBottom
       Announcement
 
-  Unisex
-    MaleImg
-      ImgContent
-    FemaleImg
+  UnisexCard
+    Unisex
       ImgContent
 
   Categories
@@ -27,7 +25,8 @@ Home
     DisplayContent
 
   Promotion
-    Promo1
+    Promo
+      PromoCard
 	PLeftContent
 
   FtSlider

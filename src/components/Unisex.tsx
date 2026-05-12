@@ -1,22 +1,41 @@
 import { useState, useEffect } from 'react';
-import MaleImg from './MaleImg';
-import FemaleImg from './FemaleImg';
+import UnisexCard from './UnisexCard';
+import MaleImg from '../images/male.webp';
+import FemaleImg from '../images/female.webp';
+
 
 function Unisex()
 {
-    const [img, setImg] = useState(true);
+    // const [img, setImg] = useState(true);
 
-    useEffect(()=> {
-        const interval = setInterval(()=>{
-            setImg(prev => !prev);
-        }, 3000);
-        return () => clearInterval(interval);
-     },[]);
+    // useEffect(()=> {
+    //     const interval = setInterval(()=>{
+    //         setImg(prev => !prev);
+    //     }, 3000);
+    //     return () => clearInterval(interval);
+    //  },[]);
 
-     return (
-        <section>
-            {img ? <MaleImg /> : <FemaleImg />}
-        </section>
+    const [activeImg, setActiveImg] = useState(true);
+    const [fade, setFade] = useState(false);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setFade(true);
+            setTimeout(() => {
+                setActiveImg(prev => !prev);
+                setFade(false);
+            }, 500);
+            return () => clearInterval(interval);
+        }, 5000);
+    }, []);
+
+    const ActiveImage = activeImg ? MaleImg : FemaleImg;
+    return (
+        // <section>
+        //     {img ? <MaleImg /> : <FemaleImg />}
+        // </section>
+        <div className={fade ? 'fade-out':'fade-in'}>
+            <UnisexCard picture={ActiveImage} />
+        </div>
     );
 }
 
