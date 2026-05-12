@@ -23,9 +23,9 @@ function Unisex()
             setTimeout(() => {
                 setActiveImg(prev => !prev);
                 setFade(false);
-            }, 500);
-            return () => clearInterval(interval);
-        }, 5000);
+            }, 300);
+        }, 3000);
+        return () => clearInterval(interval);
     }, []);
 
     const ActiveImage = activeImg ? MaleImg : FemaleImg;

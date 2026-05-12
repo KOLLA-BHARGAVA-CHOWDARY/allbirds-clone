@@ -7,7 +7,7 @@ import NavBottom from './NavBottom';
 function NavBar() 
 {
   return (
-    <nav className="relative bg-white mx-3 rounded-2xl">
+    <nav className="relative bg-white mx-6 mt-4 rounded-2xl">
       <section className="flex items-center justify-between mx-5 py-2">
         <Left />
         <Center />
