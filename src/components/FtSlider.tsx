@@ -12,7 +12,79 @@ import Ft8 from '../images/ft8.png';
 import FwController from './FwController';
 import Fw from './Fw'; 
 
- const images = [Ft1, Ft2, Ft3, Ft4, Ft5, Ft6, Ft7, Ft8];
+ const products = [
+    {
+        image: Ft1,
+        status: "NEW COLOR",
+        name: "MEN'S CANVAS RUNNER NZ",
+        color: "Deep Navy Stripes",
+        price: 100,
+        colorCode: "#D7D7D2",
+    },
+
+    {
+        image: Ft2,
+        status: "NEW COLOR",
+        name: "WOMEN'S TREE GLIDER",
+        color: "Burlwood",
+        price: 140,
+        colorCode: "#AF8D86",
+    },
+
+    {
+        image: Ft3,
+        status: "PANTONE COLOR",
+        name: "MEN'S CANVAS CRUISER",
+        color: "Cultured Blue",
+        price: 75,
+        colorCode: "#8EA5B8",
+    },
+
+    {
+        image: Ft4,
+        status: "NEW COLOR",
+        name: "WOMEN'S BREEZER MARY JANE",
+        color: "Dusty pink",
+        price: 115,
+        colorCode: "#CCB2A6",
+    },
+
+    {
+        image: Ft5,
+        status: "NEW COLOR",
+        name: "MEN'S DASHER NZ",
+        color: "Seagrass",
+        price: 140,
+        colorCode: "#A1ADAA",
+    },
+
+    {
+        image: Ft6,
+        status: "NEW COLOR",
+        name: "WOMEN'S VARSITY STRAP",
+        color: "Burlwood",
+        price: 115,
+        colorCode: "#AA8379",
+    },
+
+    {
+        image: Ft7,
+        status: "NEW",
+        name: "MEN'S CRUISER SLIP ON TERRY",
+        color: "Ochre/Warm White",
+        price: 110,
+        colorCode: "#A7944E",
+    },
+
+    {
+        image: Ft8,
+        status: "PANTONE COLOR",
+        name: "WOMEN'S CANVAS CRUISER",
+        color: "Visionary Lilac",
+        price: 75,
+        colorCode: "#ABA7AC",
+    }
+];
  const slideWidth = 566; // Adjust this value based on the actual width of your slides
 
 function FtSlider()
@@ -24,7 +96,7 @@ function FtSlider()
         const container = sliderRef.current;
         if (!container) return;
 
-        const clampIdx = Math.max(0,Math.min(newIndex, images.length-1));
+        const clampIdx = Math.max(0,Math.min(newIndex, products.length-1));
         setFwIdx(clampIdx);
         container.scrollTo({
             left: clampIdx * slideWidth,
@@ -37,11 +109,11 @@ function FtSlider()
                 onPrev = { () => scrollToIndex(fwIdx-1) }
                 onNext = { () => scrollToIndex(fwIdx+1) }   
                 disablePrev = { fwIdx === 0 }
-                disableNext = { fwIdx === images.length-1 }
+                disableNext = { fwIdx === products.length-1 }
             />    
             <Fw 
                 ref={sliderRef} 
-                images={images}
+                products={products}
             />    
         </section>
     );
