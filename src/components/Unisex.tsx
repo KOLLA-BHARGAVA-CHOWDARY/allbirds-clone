@@ -27,12 +27,13 @@ function Unisex()
         }, 3000);
         return () => clearInterval(interval);
     }, []);
-
     const ActiveImage = activeImg ? MaleImg : FemaleImg;
+
     return (
         // <section>
         //     {img ? <MaleImg /> : <FemaleImg />}
         // </section>
+        
         <div className={fade ? 'fade-out':'fade-in'}>
             <UnisexCard picture={ActiveImage} />
         </div>
