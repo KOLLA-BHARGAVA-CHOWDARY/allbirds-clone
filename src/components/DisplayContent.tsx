@@ -28,14 +28,14 @@ function DisplayContent({products}:ProductsProps)
             <div className="flex gap-4 items-center justify-center">
                 {(products.gender === "men" || products.gender === "unisex") && (
                     <div>
-                        <button className="text-xs font-semibold border border-black rounded-full px-7 py-2">
+                        <button className="text-xs font-semibold border border-black rounded-full px-7 py-2 hover:bg-black hover:text-white duration-200">
                             SHOP MEN
                         </button>
                     </div>
                 )}
                 {(products.gender === "women" || products.gender === "unisex") && (
                     <div>
-                        <button className="text-xs font-semibold border border-black rounded-full px-4 py-2">
+                        <button className="text-xs font-semibold border border-black rounded-full px-4 py-2 hover:bg-black hover:text-white duration-200">
                             SHOP WOMEN
                         </button>
                     </div>

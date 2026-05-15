@@ -13,10 +13,10 @@ function Cat4()
                 BEST SELLERS
             </button>
             <div className="flex flex-col gap-2 items-center justify-center text-center absolute top-[14%] inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-10 group-hover:translate-y-0 ">
-                <button className="w-[120px] border rounded-2xl px-4 py-2 border-white text-white text-xs font-bold">
+                <button className="w-[120px] border rounded-2xl px-4 py-2 border-white text-white text-xs font-semibold hover:bg-white hover:text-black duration-200">
                     SHOP MEN
                 </button>
-                <button className="w-[120px] border rounded-2xl px-4 py-2 border-white text-white text-xs font-bold">
+                <button className="w-[120px] border rounded-2xl px-4 py-2 border-white text-white text-xs font-semibold hover:bg-white hover:text-black duration-200">
                     SHOP WOMEN
                 </button>
             </div>    

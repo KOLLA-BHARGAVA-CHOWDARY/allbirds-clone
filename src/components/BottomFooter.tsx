@@ -1,4 +1,4 @@
-function BottomFooter()
+export default function BottomFooter()
 {
     return(
         <div className="col-span-2 flex items-center justify-between border-t py-6 text-xs tracking-wide">
@@ -11,5 +11,3 @@ function BottomFooter()
         </div>
     );
 }
-
-export default BottomFooter;

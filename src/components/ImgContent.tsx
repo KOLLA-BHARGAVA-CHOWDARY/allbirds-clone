@@ -9,12 +9,12 @@ function ImgContent()
             </div>  
             <div className="flex gap-4 justify-start md:justify-end">
                 <div>
-                    <button className="bg-white px-7 py-2 rounded-full text-xs font-semibold">
+                    <button className="bg-white px-7 py-2 rounded-full text-xs font-semibold hover:bg-black hover:text-white duration-200">
                         SHOP MEN
                     </button>
                 </div>
                 <div>
-                    <button className="bg-white px-4 py-2 rounded-full text-xs font-semibold">    
+                    <button className="bg-white px-4 py-2 rounded-full text-xs font-semibold hover:bg-black hover:text-white duration-200">    
                         SHOP WOMEN
                     </button>
                 </div> 
