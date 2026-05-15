@@ -7,7 +7,7 @@ function Cat3()
             <img 
                 src={Womens}    
                 alt='Womens'    
-                className="rounded-2xl w-full h-full object-cover group-hover:rounded-full" 
+                className="rounded-2xl w-full h-full object-cover group-hover:rounded-full transition-all duration-500" 
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
                 <button className="w-[120px] border rounded-2xl px-4 py-2 border-white text-white text-xs font-bold absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 group-hover:border-none group-hover:-translate-y-12 transition-all duration-500">

@@ -1,13 +1,13 @@
 Home
   Header
     TopBar
+    NavBar
+      Left
+      center
+      Menu
+      Features
+      NavBottom
     HeroBanner
-      NavBar
-        Left
-        center
-        Menu
-        Features
-	NavBottom
       Announcement
 
   UnisexCard
@@ -22,7 +22,9 @@ Home
 
   Display
     Products
-    DisplayContent
+      DisplayContent
+      DisplayContainer
+      
 
   Promotion
     Promo

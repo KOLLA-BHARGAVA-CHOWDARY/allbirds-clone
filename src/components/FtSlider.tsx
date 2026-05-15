@@ -12,7 +12,7 @@ import Ft8 from '../images/ft8.png';
 import FwController from './FwController';
 import Fw from './Fw'; 
 
- const products = [
+const products = [
     {
         image: Ft1,
         status: "NEW COLOR",
@@ -85,7 +85,8 @@ import Fw from './Fw';
         colorCode: "#ABA7AC",
     }
 ];
- const slideWidth = 566; // Adjust this value based on the actual width of your slides
+
+const slideWidth = 433; // Adjust this value based on the actual width of your slides
 
 function FtSlider()
 {
@@ -96,7 +97,7 @@ function FtSlider()
         const container = sliderRef.current;
         if (!container) return;
 
-        const clampIdx = Math.max(0,Math.min(newIndex, products.length-1));
+        const clampIdx = Math.max(0, Math.min(newIndex, products.length-1));
         setFwIdx(clampIdx);
         container.scrollTo({
             left: clampIdx * slideWidth,

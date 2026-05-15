@@ -13,9 +13,9 @@ function FwController({ onPrev, onNext, disablePrev, disableNext }: FtSliderProp
                 NEW ARRIVALS
             </h1>
             <div>
-              <button onClick={onPrev} disabled={disablePrev} className="border border-black rounded-full w-10 h-10 mr-4 hover:bg-black hover:text-white">
+                <button onClick={onPrev} disabled={disablePrev} className="border border-black rounded-full w-10 h-10 mr-4 hover:bg-black hover:text-white">
                     {"<"}
-                 </button>
+                </button>
                 <button onClick={onNext} disabled={disableNext} className="border border-black rounded-full w-10 h-10 hover:bg-black hover:text-white">
                     {">"}
                 </button>
